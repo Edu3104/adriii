@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi san valentin?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #b3e0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            gap: 10px; 
+        }
+        .contenedor {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .titulo h1 {
+            color: #d6336c;
+            margin: 10px 0;
+        }
+        .opciones {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .si {
+            background-color: #28a745;
+        }
+        .no {
+            background-color: #dc3545;
+        }
+        .mensaje {
+            display: none;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #d6336c;
+        }
+        #si:target {
+            display: block;
+        }
+        .no:focus ~ .si, .no:active ~ .si {
+            font-size: 20px;
+            padding: 12px 25px;
+        }
+        .carrusel {
+            width: 280px;
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+        .carrusel img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: carruselAnimacion 9s infinite;
+        }
+        .carrusel img:nth-child(1) { animation-delay: 0s; }
+        .carrusel img:nth-child(2) { animation-delay: 3s; }
+        .carrusel img:nth-child(3) { animation-delay: 6s; }
+        @keyframes carruselAnimacion {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        .boton-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .boton-link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿Quieres ser mi san valentin?</h1>
+        </div>
+        <div class="opciones">
+            <a href="#no" class="btn no">No</a>
+            <a href="#si" class="btn si">Sí</a>
+        </div>
+        <div id="si" class="mensaje">
+            <h2>Te Amo</h2>
+        </div>
+    </div>
+    <div class="carrusel">
+        <img src="foto1.jpeg" alt="Foto 1">
+        <img src="foto2.jpeg" alt="Foto 2">
+        <img src="foto3.jpeg" alt="Foto 3">
+    </div>
+    <a href="https://www.greetingsisland.com/ecard/peoxcrxnmurv" class="boton-link" target="_blank">jijijjijij</a>
+</body>
+</html>
+
